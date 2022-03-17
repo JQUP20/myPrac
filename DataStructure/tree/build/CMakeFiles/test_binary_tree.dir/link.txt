@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/test_binary_tree.dir/test_binary_tree.o CMakeFiles/test_binary_tree.dir/BinaryTree.o  -o test_binary_tree 
