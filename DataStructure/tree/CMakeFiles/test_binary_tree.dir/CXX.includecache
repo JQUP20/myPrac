@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/qlinux/CPP/myPrac/DataStructure/tree/BinaryTree.cpp
+iostream
+-
+stack
+-
+queue
+-
+BinaryTree.h
+/home/qlinux/CPP/myPrac/DataStructure/tree/BinaryTree.h
+
+/home/qlinux/CPP/myPrac/DataStructure/tree/BinaryTree.h
+
+/home/qlinux/CPP/myPrac/DataStructure/tree/test_binary_tree.cpp
+BinaryTree.h
+/home/qlinux/CPP/myPrac/DataStructure/tree/BinaryTree.h
+iostream
+-
+
