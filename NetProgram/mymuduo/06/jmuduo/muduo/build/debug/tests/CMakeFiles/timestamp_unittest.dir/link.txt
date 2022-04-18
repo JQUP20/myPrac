@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.o  -o timestamp_unittest  -L/home/qlinux/CPP/myPrac/NetProgram/jmuduo/muduo/build/debug ../libmuduo_base.a -lpthread -lrt 

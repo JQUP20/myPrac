@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/qlinux/CPP/myPrac/NetProgram/jmuduo/muduo/base/tests/Timestamp_unittest.cc
+vector
+-
+stdio.h
+-
+

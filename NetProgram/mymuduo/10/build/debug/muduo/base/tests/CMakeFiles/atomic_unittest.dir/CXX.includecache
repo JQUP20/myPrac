@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/qlinux/CPP/myPrac/NetProgram/mymuduo/10/jmuduo/muduo/base/Atomic.h
+boost/noncopyable.hpp
+-
+stdint.h
+-
+
+/home/qlinux/CPP/myPrac/NetProgram/mymuduo/10/jmuduo/muduo/base/tests/Atomic_unittest.cc
+muduo/base/Atomic.h
+-
+assert.h
+-
+

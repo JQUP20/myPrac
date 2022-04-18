@@ -1,0 +1,1 @@
+/apps/sylar/bin/c++   -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations  -rdynamic CMakeFiles/leptjson_test.dir/test.cpp.o  -o leptjson_test libleptjson.a 

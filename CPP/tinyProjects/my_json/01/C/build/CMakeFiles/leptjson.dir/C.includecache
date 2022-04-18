@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/qlinux/CPP/myPrac/CPP/tinyProjects/my_json/01/C/leptjson.c
+leptjson.h
+/home/qlinux/CPP/myPrac/CPP/tinyProjects/my_json/01/C/leptjson.h
+assert.h
+-
+stdlib.h
+-
+
+/home/qlinux/CPP/myPrac/CPP/tinyProjects/my_json/01/C/leptjson.h
+

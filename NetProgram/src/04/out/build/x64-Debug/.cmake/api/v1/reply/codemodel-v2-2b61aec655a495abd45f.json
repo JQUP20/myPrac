@@ -1,0 +1,68 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.6"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "pas",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "echocli::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-echocli-Debug-9f62de0d807e23bb6cf3.json",
+					"name" : "echocli",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "echosrv_poll::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-echosrv_poll-Debug-eac126f8ee569a96bbaa.json",
+					"name" : "echosrv_poll",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "F:/Code/C++/C++ OpenProgram/muduo_server_learn-master/src/04/out/build/x64-Debug",
+		"source" : "F:/Code/C++/C++ OpenProgram/muduo_server_learn-master/src/04"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

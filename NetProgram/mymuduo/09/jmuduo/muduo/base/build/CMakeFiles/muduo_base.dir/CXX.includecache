@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/qlinux/CPP/myPrac/NetProgram/jmuduo/muduo/base/Timestamp.cc
+Timestamp.h
+/home/qlinux/CPP/myPrac/NetProgram/jmuduo/muduo/base/Timestamp.h
+sys/time.h
+-
+stdio.h
+-
+inttypes.h
+-
+boost/static_assert.hpp
+-
+
+/home/qlinux/CPP/myPrac/NetProgram/jmuduo/muduo/base/Timestamp.h
+muduo/base/copyable.h
+-
+muduo/base/Types.h
+-
+boost/operators.hpp
+-
+

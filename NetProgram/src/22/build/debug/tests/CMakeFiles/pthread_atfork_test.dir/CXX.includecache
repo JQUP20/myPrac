@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/qlinux/CPP/myPrac/NetProgram/src/22/jmuduo/tests/Pthread_atfork_test.cc
+stdio.h
+-
+time.h
+-
+pthread.h
+-
+unistd.h
+-
+

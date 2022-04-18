@@ -189,5 +189,183 @@ BinaryNewTreeNode* GetNext(BinaryNewTreeNode* pNode)
     return pNext;
 }
 
+// 面试题54：二叉搜索树的第k个结点
+// 题目：给定一棵二叉搜索树，请找出其中的第k大的结点。
+
+#include <cstdio>
+
+const BinaryTreeNode* KthNodeCore(const BinaryTreeNode* pRoot, unsigned int& k);
+
+const BinaryTreeNode* KthNode(const BinaryTreeNode* pRoot, unsigned int k)
+{
+    if(pRoot == nullptr || k == 0)
+        return nullptr;
+
+    return KthNodeCore(pRoot, k);
+}
+
+const BinaryTreeNode* KthNodeCore(const BinaryTreeNode* pRoot, unsigned int& k)
+{
+    const BinaryTreeNode* target = nullptr;
+
+    if(pRoot->m_pLeft != nullptr)
+        target = KthNodeCore(pRoot->m_pLeft, k);
+
+    if(target == nullptr)
+    {
+        if(k == 1)
+            target = pRoot;
+
+        k--;
+    }
+
+    if(target == nullptr && pRoot->m_pRight != nullptr)
+        target = KthNodeCore(pRoot->m_pRight, k);
+
+    return target;
+}
+
+
+// 面试题55（一）：二叉树的深度
+// 题目：输入一棵二叉树的根结点，求该树的深度。从根结点到叶结点依次经过的
+// 结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。
+
+#include <cstdio>
+
+int TreeDepth(const BinaryTreeNode* pRoot)
+{
+    if(pRoot == nullptr)
+        return 0;
+
+    int nLeft = TreeDepth(pRoot->m_pLeft);
+    int nRight = TreeDepth(pRoot->m_pRight);
+
+    return (nLeft > nRight) ? (nLeft + 1) : (nRight + 1);
+}
+
+
+// 面试题55（二）：平衡二叉树
+// 题目：输入一棵二叉树的根结点，判断该树是不是平衡二叉树。如果某二叉树中
+// 任意结点的左右子树的深度相差不超过1，那么它就是一棵平衡二叉树。
+
+#include <cstdio>
+#include "..\Utilities\BinaryTree.h"
+
+// ====================方法1====================
+int TreeDepth(const BinaryTreeNode* pRoot)
+{
+    if(pRoot == nullptr)
+        return 0;
+
+    int nLeft = TreeDepth(pRoot->m_pLeft);
+    int nRight = TreeDepth(pRoot->m_pRight);
+
+    return (nLeft > nRight) ? (nLeft + 1) : (nRight + 1);
+}
+
+bool IsBalanced_Solution1(const BinaryTreeNode* pRoot)
+{
+    if(pRoot == nullptr)
+        return true;
+
+    int left = TreeDepth(pRoot->m_pLeft);
+    int right = TreeDepth(pRoot->m_pRight);
+    int diff = left - right;
+    if(diff > 1 || diff < -1)
+        return false;
+
+    return IsBalanced_Solution1(pRoot->m_pLeft) 
+        && IsBalanced_Solution1(pRoot->m_pRight);
+}
+
+// ====================方法2====================
+bool IsBalanced(const BinaryTreeNode* pRoot, int* pDepth);
+
+bool IsBalanced_Solution2(const BinaryTreeNode* pRoot)
+{
+    int depth = 0;
+    return IsBalanced(pRoot, &depth);
+}
+
+bool IsBalanced(const BinaryTreeNode* pRoot, int* pDepth)
+{
+    if(pRoot == nullptr)
+    {
+        *pDepth = 0;
+        return true;
+    }
+
+    int left, right;
+    if(IsBalanced(pRoot->m_pLeft, &left) 
+        && IsBalanced(pRoot->m_pRight, &right))
+    {
+        int diff = left - right;
+        if(diff <= 1 && diff >= -1)
+        {
+            *pDepth = 1 + (left > right ? left : right);
+            return true;
+        }
+    }
+
+    return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

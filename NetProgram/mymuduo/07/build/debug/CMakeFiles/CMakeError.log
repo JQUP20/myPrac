@@ -1,0 +1,52 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/qlinux/CPP/myPrac/NetProgram/mymuduo/07/build/debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_555bc/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_555bc.dir/build.make CMakeFiles/cmTC_555bc.dir/build
+gmake[1]: Entering directory `/home/qlinux/CPP/myPrac/NetProgram/mymuduo/07/build/debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_555bc.dir/CheckSymbolExists.cxx.o
+/apps/sylar/bin/c++    -g -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Werror -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -rdynamic    -o CMakeFiles/cmTC_555bc.dir/CheckSymbolExists.cxx.o -c /home/qlinux/CPP/myPrac/NetProgram/mymuduo/07/build/debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/qlinux/CPP/myPrac/NetProgram/mymuduo/07/build/debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/qlinux/CPP/myPrac/NetProgram/mymuduo/07/build/debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:33: error: use of old-style cast to ‘int*’ [-Werror=old-style-cast]
+    8 |   return ((int*)(&pthread_create))[argc];
+      |                                 ^
+      |           -----------------------
+      |           reinterpret_cast<int*> ((&pthread_create))
+cc1plus: all warnings being treated as errors
+gmake[1]: *** [CMakeFiles/cmTC_555bc.dir/CheckSymbolExists.cxx.o] Error 1
+gmake[1]: Leaving directory `/home/qlinux/CPP/myPrac/NetProgram/mymuduo/07/build/debug/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_555bc/fast] Error 2
+
+File /home/qlinux/CPP/myPrac/NetProgram/mymuduo/07/build/debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/qlinux/CPP/myPrac/NetProgram/mymuduo/07/build/debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_e1711/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_e1711.dir/build.make CMakeFiles/cmTC_e1711.dir/build
+gmake[1]: Entering directory `/home/qlinux/CPP/myPrac/NetProgram/mymuduo/07/build/debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e1711.dir/CheckFunctionExists.cxx.o
+/apps/sylar/bin/c++    -g -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Werror -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -rdynamic -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e1711.dir/CheckFunctionExists.cxx.o -c /home/qlinux/CPP/myPrac/NetProgram/mymuduo/07/build/debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_e1711
+/apps/sylar/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1711.dir/link.txt --verbose=1
+/apps/sylar/bin/c++  -g -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Werror -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -rdynamic -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_e1711.dir/CheckFunctionExists.cxx.o  -o cmTC_e1711 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTC_e1711] Error 1
+gmake[1]: Leaving directory `/home/qlinux/CPP/myPrac/NetProgram/mymuduo/07/build/debug/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_e1711/fast] Error 2
+
+

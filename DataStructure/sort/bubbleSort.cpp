@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+void printArray(int arr[], int len);
+
 void bubbleSort(int arr[], int length)
 {
     for(int i = 0; i < length - 1; i++)
@@ -16,6 +18,7 @@ void bubbleSort(int arr[], int length)
 int Partition(int *arr, int left, int right)
 {
     int pivot = left;
+    int len = right - left + 1;
 
     while(left <= right)
     {
@@ -29,6 +32,7 @@ int Partition(int *arr, int left, int right)
                 break;
             }
         }
+        printArray(arr, len);
         for(; left <= pivot; left++)
         {
             if(arr[pivot] < arr[left])
@@ -39,6 +43,8 @@ int Partition(int *arr, int left, int right)
                 break;
             }
         }
+
+        printArray(arr, len);
     }
 
     return pivot;
@@ -55,7 +61,6 @@ void quickSort(int *arr, int left, int right)
     quickSort(arr, pivot + 1, right);
 }
 
-void printArray(int arr[], int len);
 
 void buildMaxHeap(int arr[], int begin, int end)
 {
@@ -112,11 +117,11 @@ int main()
 
 //    bubbleSort(arr, 10);
 
-//    cout << "QuickSort Test!!!" << endl;
-//    quickSort(arr, 0, 9);
+    cout << "QuickSort Test!!!" << endl;
+    quickSort(arr, 0, 9);
 
-    cout << "heapSort Test" << endl;
-    heapSort(arr, 10);
+//    cout << "heapSort Test" << endl;
+//    heapSort(arr, 10);
 
     printArray(arr, 10);
 }

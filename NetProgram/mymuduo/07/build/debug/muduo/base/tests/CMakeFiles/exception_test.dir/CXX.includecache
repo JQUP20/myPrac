@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/qlinux/CPP/myPrac/NetProgram/mymuduo/07/jmuduo/muduo/base/Exception.h
+muduo/base/Types.h
+-
+exception
+-
+
+/home/qlinux/CPP/myPrac/NetProgram/mymuduo/07/jmuduo/muduo/base/Types.h
+stdint.h
+-
+string.h
+-
+string
+-
+assert.h
+-
+
+/home/qlinux/CPP/myPrac/NetProgram/mymuduo/07/jmuduo/muduo/base/tests/Exception_test.cc
+muduo/base/Exception.h
+-
+stdio.h
+-
+
